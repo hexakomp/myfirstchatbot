@@ -1,0 +1,18 @@
+step 1
+Empty folder - create virtual environment
+python -m venv .venv
+
+step 2
+activate the venv
+./.venv/scripts/activate
+
+step 3
+Install the requirements.txt
+python install -r .requirements.txt
+
+step 4
+create .env and enter the following
+GOOGLE_API_KEY=key from aistudio
+
+step 5
+import 
