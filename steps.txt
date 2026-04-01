@@ -15,4 +15,4 @@ create .env and enter the following
 GOOGLE_API_KEY=key from aistudio
 
 step 5
-import 
+create chatbot-gemini.py

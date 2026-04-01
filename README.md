@@ -81,9 +81,10 @@ Check the top of each script to see which environment variables it expects.
 
 ## Notes & Troubleshooting
 
-- The dependency filename in this repo is `requrirements.txt` (typo). If you prefer, rename it to `requirements.txt` and update your workflows accordingly.
+
 - If a script raises missing key errors, confirm the variable names in `.env` match those referenced in the script.
 - For remote API access, ensure network access and valid API keys.
+
 
 ## Contributions
 
