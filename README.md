@@ -5,7 +5,7 @@ This repository contains simple chatbot scripts using different backends (Ollama
 ## Files
 - `chatbot-ollama.py` — example bot using Ollama (local/remote Ollama API)
 - `chatbot-gemini.py` — example bot using Google Gemini (or configured provider)
-- `requrirements.txt` — Python dependencies (note: filename contains a typo; use as-is)
+- `requirements.txt` — Python dependencies
 
 ## Requirements
 
@@ -21,16 +21,10 @@ python -m venv .venv
 & .\.venv\Scripts\Activate.ps1
 ```
 
-2. Install dependencies:
+2. Install dependencies from the `requirements.txt` file:
 
 ```powershell
-pip install -r .\requrirements.txt
-```
-
-3. (Recommended) install `python-dotenv` if your scripts expect it:
-
-```powershell
-pip install python-dotenv
+pip install -r .\requirements.txt
 ```
 
 ## .env setup
@@ -41,11 +35,9 @@ Example `.env` template:
 
 ```
 # Example .env
+GOOGLE_API_KEY=your_gemini_api_key_here
 OLLAMA_API_URL=http://localhost:11434
 OLLAMA_API_KEY=your_ollama_api_key_here
-GEMINI_API_KEY=your_gemini_api_key_here
-OPENAI_API_KEY=your_openai_api_key_here
-MODEL=gpt-4
 # Add other keys or config values your scripts use
 ```
 
@@ -70,6 +62,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
+google_key = os.getenv('GOOGLE_API_KEY')
 ollama_key = os.getenv('OLLAMA_API_KEY')
 ```
 
