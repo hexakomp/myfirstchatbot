@@ -21,10 +21,11 @@ systemmessage= "You are a Teacher , answer the question in a concise manner."
 
 def chatbot_response(user_input):
     messages = [
-        ("system", systemmessage),
+        ("system", systemmessage),        
         ("human", user_input),
     ]
     ai_msg = llm.invoke(messages).content
+    
     return ai_msg
 
 

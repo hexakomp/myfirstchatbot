@@ -4,8 +4,6 @@ from langchain_ollama import ChatOllama
 import gradio as gr
 
 
-
-
 # Initialize the language model
 llm = ChatOllama(
     url="http://localhost:11434",
